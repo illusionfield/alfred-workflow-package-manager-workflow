@@ -9,7 +9,8 @@ if DEBUG
   WORKFLOW_PATH = "~/Sites/alfred-workflow-package-manager-workflow/tmp"
 else
   HOST = "http://flow.lab.io"
-  WORKFLOW_PATH = "~/Library/Application\\ Support/Alfred\\ 2/Alfred.alfredpreferences/workflows"
+  alfred_preferences = ENV['alfred_preferences'] ? ENV['alfred_preferences'].gsub(" ","\\ ") : "~/Library/Application\\ Support/Alfred\\ 2/Alfred.alfredpreferences"
+  WORKFLOW_PATH = "#{alfred_preferences}/workflows"
 end
 
 module Workflow
