@@ -1,5 +1,3 @@
-require 'net/http'
-require 'json'
 require 'sqlite3'
 
 DEBUG = true
