@@ -1,15 +1,14 @@
-require 'net/http'
-require 'json'
 require 'sqlite3'
 
-DEBUG = true
+DEBUG = false
 
 if DEBUG
   HOST = "http://alfred-workflow-package-manager.dev"
   WORKFLOW_PATH = "~/Sites/alfred-workflow-package-manager-workflow/tmp"
 else
   HOST = "http://flow.lab.io"
-  WORKFLOW_PATH = "~/Library/Application\\ Support/Alfred\\ 2/Alfred.alfredpreferences/workflows"
+  alfred_preferences = ENV['alfred_preferences'] ? ENV['alfred_preferences'].gsub(" ","\\ ") : "~/Library/Application\\ Support/Alfred\\ 2/Alfred.alfredpreferences"
+  WORKFLOW_PATH = "#{alfred_preferences}/workflows"
 end
 
 module Workflow
