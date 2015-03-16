@@ -1,2 +1,13 @@
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
+.Trash
+
+#Custom
 tmp
 /workflow.db
+Gemfile.lock
