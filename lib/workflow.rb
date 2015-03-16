@@ -1,6 +1,6 @@
 require 'sqlite3'
 
-DEBUG = true
+DEBUG = false
 
 if DEBUG
   HOST = "http://alfred-workflow-package-manager.dev"
